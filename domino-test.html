@@ -79,6 +79,11 @@
 				$this.addClass(steps[0]);
 		});
 		
+		$(".domino").click(function (event) {
+		    var card = $(this);
+		    $(this).parent().remove(card);
+		    $("#desk").append(card);
+		});
 		
 	} );
 	
