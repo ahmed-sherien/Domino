@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"> 
@@ -19,7 +19,7 @@
 		//test bed
 		
 		//create a new game server and shuffle and deal
-		var gameServer = new DominoGame();
+		var gameServer = new Game();
 		gameServer.shuffle();
 		gameServer.deal();
 		
@@ -39,7 +39,7 @@
 			
 			for(var i = 0; i < cards.length; i++) {
 			
-				var card = client.createCard( cards[i].left(), cards[i].right());
+				var card = client.createCard(cards[i]);
 
 				$("#player" + p + " .section").append( card );
 				
