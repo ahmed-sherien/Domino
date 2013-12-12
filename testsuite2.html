@@ -14,8 +14,8 @@
 <script type="text/javascript">
     var gameServer = new Game();
     var client = new DominoClient();
-    var a = gameServer.whichPlayer();
     var cc = 0;
+    var a = 0;
     var who = -1;
     var canPlay = false;
     $(function () {
@@ -26,7 +26,8 @@
         gameServer.shuffle();
         gameServer.deal();
         
-        gameServer.makePlay(a, new Game.Domino(6,6));
+        a = gameServer.whichPlayer();
+        gameServer.makePlay(a, new Game.Domino(6, 6));
 		
 
         domcard = client.createCard(new Game.Domino(6, 6));
